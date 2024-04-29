@@ -1,0 +1,76 @@
+{% extends "basePage.html" %}
+
+{% block title %}
+Home{% endblock title %}
+
+{% block head %}
+
+<style>
+    .back-video {
+        height: 690px;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .text {
+        position: absolute;
+        top: 370px;
+        left: 180px;
+        font-weight: bolder;
+    }
+
+    .btn-book {
+        border-radius: 30px;
+        padding: 20px 50px;
+        border: 2px solid black;
+        font-size: large;
+        font-weight: 900;
+        margin-top: 20px;
+        background-color: transparent;
+    }
+
+    .btn-book:hover {
+        background-color: rgba(255, 255, 255, 0.668);
+    }
+
+    .bgvid {
+        padding: 10px;
+    }
+    .card {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .card-img-top {
+        height: 300px;
+        width: auto;
+        padding: 20px;
+    }
+    .text {
+        font-weight: bold;
+    }
+</style>
+
+{% endblock head %}
+
+{% block body %}
+
+<div class="container-fluid bgvid" style="margin-bottom: 30px
+;">
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="/static/bgvid.mp4" type="video/mp4">
+    </video>
+    <div class="text">
+        <h1>Your Convenient Online and Offline Doctor Appointment Solution</h1>
+        <h2>We provide the best medical treatment and other facilties 24/7 at best value.</h2>
+        <a href="/book"><button class="btn-book">Book an appointment</button></a>
+    </div>
+</div>
+
+<section style="" class="container">
+    
+</section>
+
+<section  style="">
+</section>
+{% endblock body %}
